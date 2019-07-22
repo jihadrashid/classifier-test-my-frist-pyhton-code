@@ -7,17 +7,19 @@ x = [[152,50,30], [163,61,42], [175,73,45], [142,35,25], [168,56,38], [180,83,45
 y = ['female', 'female', 'male', 'female', 'male', 'male', 'male', 'female', 'male', 'female', 'male', 'female', 'male',
      'male', 'female', 'female', 'male', 'male', 'female', 'female', 'female', 'male', 'male']
 
+#SVM classifier
 clfv = svm.SVC(gamma='scale')
 clfv = clfv.fit(x,y)
 prediction = clfv.predict([[192,89,51]])
 print(prediction)
 
-
+#NAIVE_BEYES classifier
 gnb = naive_bayes.GaussianNB()
 gnb = gnb.fit(x,y)
 prediction = gnb.predict([[192,89,51]])
 print(prediction)
 
+#DecisionTRee classifier
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(x,y)
 prediction = clf.predict([[192,89,51]])
